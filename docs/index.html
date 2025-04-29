@@ -3,206 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DevDays Golang Bootcamp Poster</title>
+  <title>Golang Bootcamp</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0b0f2f;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0b0f2f 60%, #1e264d);
       color: white;
-      background-image: 
-        linear-gradient(135deg, #0b0f2f 60%, #1e264d),
-        url(/abstract-background-with-technological-elements_1035-7302.jpg);
-      background-size: cover;
-      background-blend-mode: overlay;
     }
 
     body {
-      display: block;
-    }
-
-    .poster {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 100%;
       min-height: 100dvh;
-      padding: 20px 20px 40px;
-      background: linear-gradient(135deg, #0b0f2f 60%, #1e264d);
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-      border-radius: 0;
-      position: relative;
-      overflow: hidden;
-      width: 100%;
       box-sizing: border-box;
     }
 
-    .title,
-    .subtitle {
-      text-align: center;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .logo-text {
+      font-size: 1rem;
+      color: #41d9f4;
+      font-weight: bold;
+    }
+
+    .logo-img {
+      height: 40px;
+      object-fit: contain;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 20px;
     }
 
     .title {
-      font-size: clamp(28px, 5vw, 38px);
-      font-weight: bold;
-      color: #41d9f4;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: clamp(24px, 6vw, 32px);
+      text-align: center;
+      font-size: clamp(24px, 6vw, 34px);
       color: #41d9f4;
       font-weight: bold;
       margin-bottom: 10px;
     }
 
     .heading {
-      font-size: clamp(22px, 4vw, 30px);
+      text-align: center;
+      font-size: clamp(20px, 5vw, 28px);
       font-weight: bold;
-      margin: 20px 0 10px;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
+      margin-bottom: 10px;
     }
 
     .section {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 20px;
-      position: relative;
-      z-index: 2;
+      line-height: 1.5;
     }
 
-    .footer {
-      font-size: 14px;
-      color: #ccc;
-      margin-top: auto;
-      text-align: center;
-    }
-
-    .gopher {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 120px;
-      height: auto;
-      z-index: 1;
-      opacity: 0.85;
+    ul {
+      padding-left: 20px;
+      margin: 10px 0;
     }
 
     .highlight {
       color: #f0a500;
-    }
-
-    .logo {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 70px;
-      height: auto;
-      z-index: 2;
-      filter: brightness(1.2) saturate(1.2);
-    }
-
-    a {
-      color: #41d9f4;
-      text-decoration: none;
       font-weight: bold;
-    }
-
-    .logo-left {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-weight: bold;
-      color: #41d9f4;
-      list-style: none;
-      margin: 0;
-      padding: 0;
     }
 
     .contact-section {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 10px;
       align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      margin-top: 10px;
+      font-size: 15px;
     }
 
-    /* Mobile responsiveness */
+    .contact-section span a {
+      color: #41d9f4;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #aaa;
+      position: relative;
+    }
+
+    .gopher {
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+      width: 90px;
+      opacity: 0.9;
+    }
+
     @media (min-width: 480px) {
-      .poster {
-        padding: 30px;
-      }
-
       .gopher {
-        width: 150px;
+        width: 120px;
       }
 
-      .logo {
-        width: 90px;
-      }
-    }
-
-    @media (max-width: 400px) {
-      .gopher {
-        width: 90px;
-        opacity: 0.7;
+      .logo-img {
+        height: 50px;
       }
 
-      .logo {
-        width: 55px;
-      }
-
-      ul {
-        padding-left: 15px;
-      }
-
-      .section {
-        font-size: 16px;
+      .contact-section {
+        flex-direction: row;
       }
     }
   </style>
 </head>
 <body>
-  <div class="poster">
-    <li class="logo-left">Golang Hyderabad</li>
-    <img class="logo" src="1000084636.png" alt="Swecha Logo">
-    <div>
-      <div class="subtitle">GOLANG BOOTCAMP</div>
-      <div class="heading">Kickoff Meeting!</div>
-      <div class="section">
-        We'll brainstorm and plan:
-        <ul>
-          <li>Workshop content & structure</li>
-          <li>Live coding demos & project ideas</li>
-          <li>Volunteer roles & timeline setup</li>
-        </ul>
-      </div>
-      <div class="section">
-        <strong>Date:</strong> <span class="highlight">3rd May 2025</span> |
-        <strong>Time:</strong> <span class="highlight">10:00 AM</span><br>
-        <strong>Venue:</strong> <span class="highlight">Swecha Office, Gachibowli, Hyderabad</span>
-      </div>
-      <div class="section">
-        Open to <strong>students, engineers, and all tech lovers!</strong><br>
-        <em>"Your ideas shape the bootcamp!"</em>
-      </div>
-      <div class="section contact-section">
-        <span>✉️ <strong>Contact us:</strong> <a href="mailto:contact@example.com">Email</a></span>
-        <span>|</span>
-        <span>📝 <strong>Register now:</strong> <a href="https://example.com/register">Sign Up</a></span>
-      </div>
+  <header>
+    <div class="logo-text">Golang Hyderabad</div>
+    <img src="1000084636.png" alt="Swecha Logo" class="logo-img" />
+  </header>
+
+  <main>
+    <div class="title">GOLANG BOOTCAMP</div>
+    <div class="heading">Kickoff Meeting!</div>
+
+    <div class="section">
+      We'll brainstorm and plan:
+      <ul>
+        <li>Workshop content & structure</li>
+        <li>Live coding demos & project ideas</li>
+        <li>Volunteer roles & timeline setup</li>
+      </ul>
     </div>
-    <div class="footer">
-      #GolangHyderabad
+
+    <div class="section">
+      <strong>Date:</strong> <span class="highlight">3rd May 2025</span> |
+      <strong>Time:</strong> <span class="highlight">10:00 AM</span><br>
+      <strong>Venue:</strong> <span class="highlight">Swecha Office, Gachibowli, Hyderabad</span>
     </div>
-    <img class="gopher" src="https://blog.golang.org/gopher/gopher.png" alt="Golang Mascot">
-  </div>
+
+    <div class="section">
+      Open to <strong>students, engineers, and all tech lovers!</strong><br>
+      <em>"Your ideas shape the bootcamp!"</em>
+    </div>
+
+    <div class="contact-section">
+      <span>✉️ Contact us: <a href="mailto:contact@example.com">Email</a></span>
+      <span>📝 Register now: <a href="https://example.com/register">Sign Up</a></span>
+    </div>
+  </main>
+
+  <footer>
+    #GolangHyderabad
+    <img src="https://blog.golang.org/gopher/gopher.png" class="gopher" alt="Gopher">
+  </footer>
 </body>
 </html>
