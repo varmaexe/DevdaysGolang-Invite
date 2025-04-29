@@ -1,0 +1,15 @@
+image: alpine:latest  # Lightweight Docker image
+
+pages:
+  stage: deploy
+  script:
+    - echo "Deploying to GitLab Pages..."
+    # If files are already in public/, no need to move them
+    # If files are in root, uncomment:
+    # - mkdir -p public
+    # - cp -r *.html *.css *.png public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main  # Runs only on changes to the main branch
