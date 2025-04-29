@@ -1,9 +1,0 @@
-pages:
-  stage: deploy
-  script:
-    - echo "Files are already in public/, nothing to do."
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
