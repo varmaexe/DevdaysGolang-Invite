@@ -1,8 +1,7 @@
 pages:
   stage: deploy
   script:
-    - mkdir -p public
-    - echo "Hello GitLab Pages!" > public/index.html
+    - echo "Files are already in public/, nothing to do."
   artifacts:
     paths:
       - public

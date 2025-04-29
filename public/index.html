@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevDays Golang Bootcamp Poster</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0b0f2f;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      background-image: 
+        linear-gradient(135deg, #0b0f2f 60%, #1e264d),
+        url(/abstract-background-with-technological-elements_1035-7302.jpg);
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+
+    .poster {
+      width: 100%;
+      max-width: 600px;
+      padding: 25px;
+      background: linear-gradient(135deg, #0b0f2f 60%, #1e264d);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .title,
+    .subtitle {
+      text-align: center;
+    }
+    .title {
+      font-size: clamp(28px, 5vw, 38px);
+      font-weight: bold;
+      color: #41d9f4;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: clamp(24px, 6vw, 32px); 
+      color: #41d9f4;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .heading {
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: bold;
+      margin: 20px 0 10px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .section {
+      font-size: 18px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .footer {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .gopher {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 150px;
+      height: auto;
+      z-index: 1;
+      opacity: 0.8;
+    }
+    .highlight {
+      color: #f0a500;
+    }
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      height: auto;
+      z-index: 2;
+      filter: brightness(1.2) saturate(1.2);
+    }
+    a {
+      color: #41d9f4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .logo-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-weight: bold;
+      color: #41d9f4;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
+    
+    /* Mobile-first styles */
+    @media (min-width: 480px) {
+      .poster {
+        padding: 30px;
+      }
+      .gopher {
+        width: 180px;
+        right: 30px;
+      }
+      .logo {
+        width: 100px;
+        right: 40px;
+      }
+    }
+    
+    @media (max-width: 400px) {
+      .gopher {
+        width: 100px;
+        opacity: 0.6;
+      }
+      .logo {
+        width: 60px;
+      }
+      ul {
+        padding-left: 15px;
+      }
+      .section {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <li class="logo-left">Golang Hyderabad</li> 
+    <img class="logo" src="/1000084636.png" alt="Swecha Logo">
+    <img class="gopher" src="https://blog.golang.org/gopher/gopher.png" alt="Golang Mascot">
+    <div class="subtitle">GOLANG BOOTCAMP</div>
+    <div class="heading">Kickoff Meeting!</div>
+    <div class="section">
+      We'll brainstorm and plan:
+      <ul>
+        <li>Workshop content & structure</li>
+        <li>Live coding demos & project ideas</li>
+        <li>Volunteer roles & timeline setup</li>
+      </ul>
+    </div>
+    <div class="section">
+      <strong>Date:</strong> <span class="highlight">3rd May 2025</span> | 
+      <strong>Time:</strong> <span class="highlight">10:00 AM</span><br>
+      <strong>Venue:</strong> <span class="highlight">Swecha Office, Gachibowli, Hyderabad</span>
+    </div>
+    <div class="section">
+      Open to <strong>students, engineers, and all tech lovers!</strong><br>
+      <em>"Your ideas shape the bootcamp!"</em>
+    </div>
+    <div class="section contact-section">
+      <span>✉️ <strong>Contact us:</strong> <a href="mailto:contact@example.com">Email</a></span>
+      <span>|</span>
+      <span>📝 <strong>Register now:</strong> <a href="https://example.com/register">Sign Up</a></span>
+    </div>
+    <div class="footer">
+      #GolangHyderabad
+    </div>
+  </div>
+</body>
+</html>
